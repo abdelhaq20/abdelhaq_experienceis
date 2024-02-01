@@ -24,6 +24,9 @@ export class UsuariosComponent {
   filterSurname2: string = '';
   filterEmail: string = '';
 
+  //pag
+   p: number = 1;
+
   constructor(private http: HttpClient, private router: Router, private activatedRoute: ActivatedRoute,private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {

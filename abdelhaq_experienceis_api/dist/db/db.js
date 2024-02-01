@@ -8,7 +8,7 @@ const connection = mysql2_1.default.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'experienceis',
+    database: 'abdelhaq_experienceis',
     timezone: 'Europe/Madrid',
 });
 exports.default = connection;

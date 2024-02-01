@@ -1,10 +1,7 @@
-<!-- user-list.component.html -->
-
-<div class="container p-2">
+<div class="container principal p-2">
     <div class="text-center text-dark m-3">
         <h3 class="mb-4">Listado de Usuarios</h3>
     </div>
-
     <div class="row justify-content-center">
         <div class="col-ls-12">
             <div class="table-responsive rounded-table">
@@ -35,8 +32,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let user of usuarios let i=index">
-                            <td>{{ i + 1 }}</td>
+                        <tr *ngFor="let user of usuarios | paginate: { itemsPerPage: 10, currentPage: p } let i=index">
+                            <td>{{ (p - 1) * 10 + i + 1 }}</td>
                             <td>{{ user.name }}</td>
                             <td>{{ user.surname1 }}</td>
                             <td>{{ user.surname2 }}</td>
@@ -54,6 +51,8 @@
                     </tbody>
                 </table>
             </div>
+            <!-- Agrega la paginación al final de la tabla -->
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
         </div>
     </div>
 </div>
