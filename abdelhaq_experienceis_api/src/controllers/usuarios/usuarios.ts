@@ -5,24 +5,6 @@ import { RowDataPacket } from 'mysql2';
 
 const router = express.Router();
 
-/************************************ MUY IMPORTANTE ***************************
- * 
- * Estimado revisor del código,
- * 
- * He desarrollado el backend conectado a la base de datos MySQL para habilitar funcionalidades adicionales. 
- * En la prueba se requería implementar un método POST, y he utilizado todos los métodos (POST, GET, PUT, DELETE). 
- * Además, he incluido un endpoint GET que no está relacionado con la base de datos por si no deseas conectarlo.
- * 
- * Ten en cuenta cambiar el usuario y la contrseña en el archivo db.ts
- * 
- * Agradezco tu revisión y espero tener la oportunidad de colaborar en el futuro.
- * 
- * ¡Gracias y espero que nos conozcamos algún día (^-^)!
- */
-
-
-
-
 
 // GET
 router.get("/", (req, res) => {
